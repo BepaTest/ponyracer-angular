@@ -1,0 +1,4 @@
+<ngb-pagination [(page)]="page" [collectionSize]="races.length" size="lg" [pageSize]="10"></ngb-pagination>
+<div *ngFor="let race of races | slice: (page-1) * 10 : page * 10">
+  <pr-race [raceModel]="race"></pr-race>
+</div>

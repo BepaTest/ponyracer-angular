@@ -1,0 +1,6 @@
+<div class="tab-content" id="myTabContent">
+  <div class="tab-pane fade show active" id="pending" role="tabpanel" aria-labelledby="pending-tab" *ngFor="let race of races | slice: 0:4">
+    <pr-race [raceModel]="race"></pr-race>
+    <a [routerLink]="['/races', race.id]" class="btn btn-primary mb-2">Bet on {{ race.name }}</a>
+  </div>
+</div>
